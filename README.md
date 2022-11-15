@@ -1,2 +1,2 @@
-# Camera_calculator
+# Camera-calculator
 image processing project
