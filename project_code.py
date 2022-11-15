@@ -9,7 +9,7 @@ cv2.imshow('Digits Image', small)
 #cv2.waitKey(0)
 #cv2.destroyAllWindows()
 
-
+# just adjust some light
 for i in range(37,56,1):
     for j in range(120):
         if(gray[i][j] >= 200):
@@ -43,7 +43,7 @@ cv2.imshow("blurred", blurred)
 ret , train_image = cv2.threshold(blurred, 200, 255, cv2.THRESH_BINARY_INV)
 
 # Split the image to 48 cells, each 20x20 size
-# This gives us a 4-dim array: 8 x 6 x 20 x 20////
+# This gives us a 4-dim array: 8 x 6 x 20 x 20
 cells = [np.hsplit(row,6) for row in np.vsplit(train_image,8)]
 
 # Convert the List data type to Numpy Array of shape (8,6,20,20)
